@@ -1,7 +1,7 @@
 "use strict";
 
 function easyUnpack(elements) {
-    // returns a tuple with 3 elements - first, third and second to the last
+    // returns an array with 3 elements - first, third and second to the last
 
     // your code here
     return 0;
