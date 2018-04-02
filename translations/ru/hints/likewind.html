@@ -1,0 +1,46 @@
+<body data-author="likewind">
+
+<div class="question-answer">
+    <div class="question">
+        Я не знаю, с какой стороны подойти к решению.
+    </div>
+    <div class="answer">
+        Вам нужно сделать 2 простых шага: найти 1-й, 3-й и 2-й с конца элементы, а затем вернуть их в виде tuple. 
+        Обратите внимание, что в Python нумерация элементов начинается с 0, а не с 1.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Вы могли бы привести наглядный пример?
+    </div>
+    <div class="answer">
+        К примеру, у нас есть tuple ('a', 'b', 'c', 'd', 'e', 'f', 'g') и нам нужно найти его 1-й, 3-й и 2-й с конца элементы.
+        При подсчете элементов с начала tuple - первый элемент будет иметь индекс 0. Если же считать с конца, то "первый" 
+        элемент будет иметь индекс "-1", второй - "-2" и так далее.<br>
+        В коде это будет выглядеть следующим образом:
+        <pre class="brush: python">
+        elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+        x, y, z = elements[0], elements[2], elements[-2]</pre>
+        После чего x примет значение 'a', y - 'c', z - 'f'.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        А как преобразовать полученные результаты в tuple?
+    </div>
+    <div class="answer">
+        Достаточно взять результат в круглые скобки.
+        <pre class="brush: python">
+        def easy_unpack(elements):
+            x, y, z = elements[0], elements[2], elements[-2]
+            return (x, y, x)</pre>
+        Или еще проще:
+        <pre class="brush: python">
+        def easy_unpack(elements):
+            return (elements[0], elements[2], elements[-2])</pre>
+    </div>
+</div>    
+    
+</body>
