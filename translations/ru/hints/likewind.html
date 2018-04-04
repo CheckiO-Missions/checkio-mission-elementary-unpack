@@ -20,8 +20,8 @@
         элемент будет иметь индекс "-1", второй - "-2" и так далее.<br>
         В коде это будет выглядеть следующим образом:
         <pre class="brush: python">
-        elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
-        x, y, z = elements[0], elements[2], elements[-2]</pre>
+elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+x, y, z = elements[0], elements[2], elements[-2]</pre>
         После чего x примет значение 'a', y - 'c', z - 'f'.
     </div>
 </div>
@@ -33,13 +33,13 @@
     <div class="answer">
         Достаточно взять результат в круглые скобки.
         <pre class="brush: python">
-        def easy_unpack(elements):
-            x, y, z = elements[0], elements[2], elements[-2]
-            return (x, y, x)</pre>
+def easy_unpack(elements):
+    x, y, z = elements[0], elements[2], elements[-2]
+    return (x, y, z)</pre>
         Или еще проще:
         <pre class="brush: python">
-        def easy_unpack(elements):
-            return (elements[0], elements[2], elements[-2])</pre>
+def easy_unpack(elements):
+    return (elements[0], elements[2], elements[-2])</pre>
     </div>
 </div>    
     
