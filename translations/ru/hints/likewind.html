@@ -21,7 +21,9 @@
         В коде это будет выглядеть следующим образом:
         <pre class="brush: python">
 elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
-x, y, z = elements[0], elements[2], elements[-2]</pre>
+x = elements[0]
+y = elements[2]
+z = elements[-2]</pre>
         После чего x примет значение 'a', y - 'c', z - 'f'.
     </div>
 </div>
@@ -31,15 +33,17 @@ x, y, z = elements[0], elements[2], elements[-2]</pre>
         А как преобразовать полученные результаты в tuple?
     </div>
     <div class="answer">
-        Достаточно взять результат в круглые скобки.
+        Не нужно никакаих специальных действий. Вы можете сразу использовать return.
         <pre class="brush: python">
 def easy_unpack(elements):
-    x, y, z = elements[0], elements[2], elements[-2]
-    return (x, y, z)</pre>
+    x = elements[0]
+    y = elements[2]
+    z = elements[-2]
+    return x, y, z</pre>
         Или еще проще:
         <pre class="brush: python">
 def easy_unpack(elements):
-    return (elements[0], elements[2], elements[-2])</pre>
+    return elements[0], elements[2], elements[-2]</pre>
     </div>
 </div>    
     
