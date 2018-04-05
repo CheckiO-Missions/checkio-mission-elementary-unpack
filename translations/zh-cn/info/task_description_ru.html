@@ -1,0 +1,32 @@
+<p>
+    Ваша задача - написать функцию, которая получает {% if interpreter.slug == "js-node" %}список{% else %}кортеж{% endif %} и возвращает кортеж, состоящий из 3-х элементов: первый, третий и второй, считая с конца полученного кортежа.
+</p>
+
+<p>
+    <strong>Входные данные: </strong> Кортеж (tuple), len(tuple) >= 3.
+</p>
+
+<p>
+    <strong>Выходные данные: </strong> Кортеж (tuple). 
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Примеры:</strong>
+    </p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: python">
+easyUnpack([1, 2, 3, 4, 5, 6, 7, 9]) == [1, 3, 7]
+easyUnpack([1, 1, 1, 1]) == [1, 1, 1]
+easyUnpack([6, 3, 7]) == [6, 7, 3]
+</pre>
+{% else %}
+<pre class="brush: javascript">
+easy_unpack((1, 2, 3, 4, 5, 6, 7, 9)) == (1, 3, 7)
+easy_unpack((1, 1, 1, 1)) == (1, 1, 1)
+easy_unpack((6, 3, 7)) == (6, 7, 3)
+</pre>
+{% endif %}
+</div>
