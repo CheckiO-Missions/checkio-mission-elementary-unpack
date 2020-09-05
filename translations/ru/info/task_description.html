@@ -1,17 +1,21 @@
 <p>
-    Ваше задание здесь создать функцию, которая получает массив{% if interpreter.slug == "js-node" %}(Array){% else %}(tuple){% endif %} и возвращает набор с 3 элементами - первым, третьим, вторым с конца.
+    Ваша цель сейчас&nbsp;&mdash; создать функцию, которая принимает на&nbsp;вход {% if interpreter.slug == "js-node" %}массив{% else %}кортеж{% endif %} и&nbsp;возвращает кортеж из&nbsp;3&nbsp;элементов: первого, третьего и&nbsp;второго с&nbsp;конца элементов заданного массива.
 </p>
 
 <p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 163px"/>
+    <img  title="example" src="{{MEDIA}}example.png" alt="пример" style="max-height: 163px"/>
 </p>
 
 <p>
-    <strong>Входные данные: </strong> Набор длинной не менее 3 элементов.
+    <i>Важно отметить, что вам нужно использовать индекс для извлечения элементов из&nbsp;массива. Обратите внимание, нумерация индексов начинается с&nbsp;0, не&nbsp;с&nbsp;1. Это означает, что если вы&nbsp;хотите получить первый элемент из&nbsp;массива <b>elements</b>, вам нужен <b>elements[0]</b>, а&nbsp;если второй&nbsp;&mdash; <b>elements[1]</b></i>.
 </p>
 
 <p>
-    <strong>Выходные данные: </strong> Набор элементов. 
+    <strong>Входные данные: </strong> Кортеж длиной не&nbsp;менее 3&nbsp;элементов.
+</p>
+
+<p>
+    <strong>Выходные данные: </strong> Кортеж. 
 </p>
 
 
