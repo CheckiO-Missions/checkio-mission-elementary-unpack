@@ -1,6 +1,6 @@
 <p>
     Your mission here is to create a function that gets {% if is_js %}an array{% else %}a tuple{% endif %}
-    and returns {% if is_js %}an array{% else %}a tuple{% endif %} with 3 elements -
+    and returns {% if is_js %}an array{% else %}a tuple{% endif %} with only 3 elements -
     the first, third and second element from the last for the given {% if is_js %}array{% else %}tuple{% endif %}.
 </p>
 
@@ -11,11 +11,11 @@
 <p>
     <i>
         One important thing worth pointing out is that you need to use index in order
-        to extract elements from the array. Pay attention, index counting starts
+        to extract elements from the {% if is_js %}array{% else %}tuple{% endif %}. Pay attention, index counting starts
         from 0, not from 1. Which means that if you need to get the first element
         from the {% if is_js %}array{% else %}tuple{% endif %} <b>elements</b>, you should do <b>elements[0]</b>, and the
         second element is <b>elements[1]</b>.
-    </i>.
+    </i>
 </p>
 <p>
     <strong>Input:</strong> {% if is_js %}An array{% else %}A tuple{% endif %}, at least 3 elements long.
