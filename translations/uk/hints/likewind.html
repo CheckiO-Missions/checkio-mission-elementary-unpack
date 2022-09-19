@@ -13,17 +13,17 @@
         Чи можеш ти показати на прикладі?
     </div>
     <div class="answer">
-        Наприклад, ми маємо кортеж ('a', 'b', 'c', 'd', 'e', 'f', 'g') і нам потрібно знайти 1й, 3й і 2й з кінця елементи.
+        Наприклад, ми маємо кортеж ("a", "b", "c", "d", "e", "f", "g") і нам потрібно знайти 1й, 3й і 2й з кінця елементи.
         Коли рахуємо елементи з початку кортежу - перший елемент матиме індекс 0.
         Якщо ж рахуємо з кінця, то "перший" елемент матиме індекс "-1", другий - "-2" і так далі.<br />
-        Код матиме наступник вигляд:
+        Код матиме наступний вигляд:
         <pre class="brush: python">
-elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+elements = ("a", "b", "c", "d", "e", "f", "g")
 x = elements[0]
 y = elements[2]
 z = elements[-2]
         </pre>
-        Після чого x матиме значення 'a', y - 'c', z - 'f'.
+        Після чого x матиме значення "a", y - "c", z - "f".
     </div>
 </div>
 <div class="question-answer">
@@ -33,7 +33,7 @@ z = elements[-2]
     <div class="answer">
         Жодних спеціальний операцій робити не потрібно. Ти можеш відразу використати return.
         <pre class="brush: python">
-def easy_unpack(elements):
+def easy_unpack(elements: tuple) -> tuple:
 
     x = elements[0]
     y = elements[2]
@@ -41,9 +41,10 @@ def easy_unpack(elements):
 
     return x, y, z
         </pre>
-        Або навіть простіше:
+        До речі, кортеж не обов'язково брати в дужки, якщо немає небезпеки сплутати
+        його з іншими змінними. розв'язок можна записати ще простіше:
         <pre class="brush: python">
-def easy_unpack(elements):
+def easy_unpack(elements: tuple) -> tuple:
 
     return elements[0], elements[2], elements[-2]
         </pre>
