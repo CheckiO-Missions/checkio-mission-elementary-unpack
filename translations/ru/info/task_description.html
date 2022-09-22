@@ -1,5 +1,5 @@
 <p>
-    Ваша цель сейчас&nbsp;&mdash; создать функцию, которая принимает на&nbsp;вход {% if interpreter.slug == "js-node" %}массив{% else %}кортеж{% endif %} и&nbsp;возвращает кортеж из&nbsp;3&nbsp;элементов: первого, третьего и&nbsp;второго с&nbsp;конца элементов заданного массива.
+    Ваша цель сейчас&nbsp;&mdash; создать функцию, которая принимает на&nbsp;вход {% if is_js %}массив{% else %}кортеж{% endif %} и&nbsp;возвращает {% if is_js %}массив{% else %}кортеж{% endif %} из&nbsp;3&nbsp;элементов: первого, третьего и&nbsp;второго с&nbsp;конца элементов заданного {% if is_js %}массива{% else %}кортежа{% endif %}.
 </p>
 
 <p style="text-align: center;">
@@ -7,15 +7,15 @@
 </p>
 
 <p>
-    <i>Важно отметить, что вам нужно использовать индекс для извлечения элементов из&nbsp;массива. Обратите внимание, нумерация индексов начинается с&nbsp;0, не&nbsp;с&nbsp;1. Это означает, что если вы&nbsp;хотите получить первый элемент из&nbsp;массива <b>elements</b>, вам нужен <b>elements[0]</b>, а&nbsp;если второй&nbsp;&mdash; <b>elements[1]</b></i>.
+    <i>Важно отметить, что вам нужно использовать индекс для извлечения элементов из&nbsp; {% if is_js %}массива{% else %}кортежа{% endif %}. Обратите внимание, нумерация индексов начинается с&nbsp;0, не&nbsp;с&nbsp;1. Это означает, что если вы&nbsp;хотите получить первый элемент из&nbsp;{% if is_js %}массива{% else %}кортежа{% endif %} <b>elements</b>, вам нужен <b>elements[0]</b>, а&nbsp;если второй&nbsp;&mdash; <b>elements[1]</b></i>.
 </p>
 
 <p>
-    <strong>Входные данные: </strong> Кортеж длиной не&nbsp;менее 3&nbsp;элементов.
+    <strong>Входные данные:</strong> {% if is_js %}Массив{% else %}Кортеж{% endif %} длиной не&nbsp;менее 3&nbsp;элементов.
 </p>
 
 <p>
-    <strong>Выходные данные: </strong> Кортеж. 
+    <strong>Выходные данные:</strong> {% if is_js %}Массив{% else %}Кортеж{% endif %}. 
 </p>
 
 
@@ -24,19 +24,5 @@
     <p>
         <strong>Пример:</strong>
     </p>
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">
-easyUnpack([6, 2, 9, 4, 3, 9]) == [6, 9, 3]
-easyUnpack([1, 2, 3, 4, 5, 6, 7, 9]) == [1, 3, 7]
-easyUnpack([1, 1, 1, 1]) == [1, 1, 1]
-easyUnpack([6, 3, 7]) == [6, 7, 3]
-</pre>
-{% else %}
-<pre class="brush: python">
-easy_unpack((6, 2, 9, 4, 3, 9)) == (6, 9, 3)
-easy_unpack((1, 2, 3, 4, 5, 6, 7, 9)) == (1, 3, 7)
-easy_unpack((1, 1, 1, 1)) == (1, 1, 1)
-easy_unpack((6, 3, 7)) == (6, 7, 3)
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>

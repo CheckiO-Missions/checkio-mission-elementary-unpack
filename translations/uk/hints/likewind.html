@@ -1,0 +1,53 @@
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        Я не знаю, як взятися за цю проблему.
+    </div>
+    <div class="answer">
+        Ти маєш зробити два простих кроки: знайди перший, третій і другий з кінця елементи, і поверни їх як кортеж.
+        Будь уважний, у Python номери елементів починаються з 0, а не з 1.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Чи можеш ти показати на прикладі?
+    </div>
+    <div class="answer">
+        Наприклад, ми маємо кортеж ("a", "b", "c", "d", "e", "f", "g") і нам потрібно знайти 1й, 3й і 2й з кінця елементи.
+        Коли рахуємо елементи з початку кортежу - перший елемент матиме індекс 0.
+        Якщо ж рахуємо з кінця, то "перший" елемент матиме індекс "-1", другий - "-2" і так далі.<br />
+        Код матиме наступний вигляд:
+        <pre class="brush: python">
+elements = ("a", "b", "c", "d", "e", "f", "g")
+x = elements[0]
+y = elements[2]
+z = elements[-2]
+        </pre>
+        Після чого x матиме значення "a", y - "c", z - "f".
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Як перетворити отриманий результат у кортеж?
+    </div>
+    <div class="answer">
+        Жодних спеціальний операцій робити не потрібно. Ти можеш відразу використати return.
+        <pre class="brush: python">
+def easy_unpack(elements: tuple) -> tuple:
+
+    x = elements[0]
+    y = elements[2]
+    z = elements[-2]
+
+    return x, y, z
+        </pre>
+        До речі, кортеж не обов'язково брати в дужки, якщо немає небезпеки сплутати
+        його з іншими змінними. Розв'язок можна записати ще простіше:
+        <pre class="brush: python">
+def easy_unpack(elements: tuple) -> tuple:
+
+    return elements[0], elements[2], elements[-2]
+        </pre>
+    </div>
+</div>    
+</body>
