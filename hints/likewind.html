@@ -19,6 +19,8 @@
         When counting the elements from the beginning of a tuple - the first element will have the index 0. If counting from the end, the "first" 
         element will have the index "-1", the second - "-2" and so on.<br>
         The code would be as follows:
+        <br />
+        <br />
         <pre class="brush: python">
 elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
 x = elements[0]
@@ -34,15 +36,22 @@ z = elements[-2]</pre>
     </div>
     <div class="answer">
         No special actions are required. You can instantly use return.
+        <br />
+        <br />
         <pre class="brush: python">
 def easy_unpack(elements):
+
     x = elements[0]
     y = elements[2]
     z = elements[-2]
+    
     return x, y, z</pre>
         Or even simpler:
+        <br />
+        <br />
         <pre class="brush: python">
 def easy_unpack(elements):
+
     return elements[0], elements[2], elements[-2]</pre>
     </div>
 </div>    
