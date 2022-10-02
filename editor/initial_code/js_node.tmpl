@@ -10,13 +10,13 @@ function easyUnpack(values: any[]): any[] {
 
 {% block example %}
 console.log('Example:');
-console.log(easyUnpack([1, 2, 3, 4, 5, 6, 7, 9]))
+console.log(JSON.stringify(easyUnpack([1, 2, 3, 4, 5, 6, 7, 9])));
 ;{% endblock %}
 
 // These "asserts" are used for self-checking
 {% block tests %}
 {% for t in tests %}
-assert.strictEqual({% block call %}easyUnpack({{t.input|j_args}}){% endblock %}, {% block result %}{{t.answer|j}}{% endblock %});{% endfor %}
+assert.deepStrictEqual({% block call %}easyUnpack({{t.input|j_args}}){% endblock %}, {% block result %}{{t.answer|j}}{% endblock %});{% endfor %}
 {% endblock %}
 
 {% block final %}
