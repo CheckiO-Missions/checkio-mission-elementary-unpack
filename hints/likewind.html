@@ -1,46 +1,49 @@
 <body data-author="likewind">
-
 <div class="question-answer">
     <div class="question">
-         I don't know how should I approach this problem.
+        <p>
+            I don't know how should I approach this problem.
+        </p>
     </div>
     <div class="answer">
-        You need to make 2 simple steps: find the 1st, 3rd and the 2nd elements from the end, and then return them as a tuple. 
-        Pay attention that in Python the numbering of elements starts with 0, not 1.
+        <p>
+            You need to make 2 simple steps: find the 1st, 3rd and the 2nd elements from the end, and then return them as a tuple. Pay attention that in Python the numbering of elements starts with 0, not 1.
+        </p>
     </div>
 </div>
-
 <div class="question-answer">
     <div class="question">
-        Could you give an illustrative example?
+        <p>
+            Could you give an illustrative example?
+        </p>
     </div>
     <div class="answer">
-        For example, we have a tuple ('a', 'b', 'c', 'd', 'e', 'f', 'g') and we need to find its 1st, 3rd and 2nd elements from the end.
-        When counting the elements from the beginning of a tuple - the first element will have the index 0. If counting from the end, the "first" 
-        element will have the index "-1", the second - "-2" and so on.<br>
-        The code would be as follows:
-        <br />
-        <br />
+        <p>
+            For example, we have a tuple <b class="code">('a', 'b', 'c', 'd', 'e', 'f', 'g')</b> and we need to find its 1st, 3rd and 2nd elements from the end. When counting the elements from the beginning of a tuple - the first element will have the index 0. If counting from the end, the "first" element will have the index "-1", the second - "-2" and so on. The code would be as follows:
+        </p>
         <pre class="brush: python">
 elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
 x = elements[0]
 y = elements[2]
 z = elements[-2]
         </pre>
-        After which x will take the value 'a', y - 'c', z - 'f'.
+        <p>
+            After which <b class="code">x</b> will take the value <b class="code">'a'</b>, <b class="code">y</b> - <b class="code">'c'</b>, <b class="code">z</b> - <b class="code">'f'</b>.
+        </p>
     </div>
 </div>
-
 <div class="question-answer">
     <div class="question">
-        How to convert the obtained results into a tuple?
+        <p>
+            How to convert the obtained results into a tuple?
+        </p>
     </div>
     <div class="answer">
-        No special actions are required. You can instantly use return.
-        <br />
-        <br />
+        <p>
+            No special actions are required. You can instantly use <b class="code">return</b>.
+        </p>
         <pre class="brush: python">
-def easy_unpack(elements):
+def easy_unpack(elements: tuple) -> tuple:
 
     x = elements[0]
     y = elements[2]
@@ -48,15 +51,14 @@ def easy_unpack(elements):
     
     return x, y, z
         </pre>
-        Or even simpler:
-        <br />
-        <br />
+        <p>
+            By the way, it is not necessary to enclose the tuple in parentheses, if there is no danger of confusion it with other variables. The solution may be written even simpler:
+        </p>
         <pre class="brush: python">
-def easy_unpack(elements):
+def easy_unpack(elements: tuple) -> tuple:
 
     return elements[0], elements[2], elements[-2]
         </pre>
     </div>
-</div>    
-    
+</div>
 </body>
