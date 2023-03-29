@@ -42,6 +42,7 @@ z = elements[-2]
         <p>
             Жодних спеціальний операцій робити не потрібно. Ти можеш відразу використати <b class="code">return</b>.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def easy_unpack(elements: tuple) -> tuple:
 
@@ -51,15 +52,18 @@ def easy_unpack(elements: tuple) -> tuple:
 
     return x, y, z
         </pre>
+        </div>
         <p>
             До речі, кортеж не обов'язково брати в дужки, якщо немає небезпеки сплутати
         його з іншими змінними. Розв'язок можна записати ще простіше:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def easy_unpack(elements: tuple) -> tuple:
 
     return elements[0], elements[2], elements[-2]
         </pre>
+        </div>
     </div>
 </div>    
 </body>
