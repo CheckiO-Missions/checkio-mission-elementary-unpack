@@ -42,6 +42,7 @@ z = elements[-2]
         <p>
             No special actions are required. You can instantly use <b class="code">return</b>.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def easy_unpack(elements: tuple) -> tuple:
 
@@ -51,14 +52,17 @@ def easy_unpack(elements: tuple) -> tuple:
     
     return x, y, z
         </pre>
+        </div>
         <p>
             By the way, it is not necessary to enclose the tuple in parentheses, if there is no danger of confusion it with other variables. The solution may be written even simpler:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def easy_unpack(elements: tuple) -> tuple:
 
     return elements[0], elements[2], elements[-2]
         </pre>
+        </div>
     </div>
 </div>
 </body>
