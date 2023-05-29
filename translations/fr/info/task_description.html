@@ -1,5 +1,5 @@
 <p>
-    Ta présente mission est de créer une fonction qui prend {% if is_js %}un tableau{% else %}a tuple{% endif %} et retourne un tuple avec 3 éléments : le premier, le troisième, et le second partant de la droite.
+    Votre mission consiste à créer une fonction qui récupère {% if is_js %}un <span>tableau</span> <span>(array)</span>{% else %} un <span>tuple</span>{% endif %} et renvoie {% if is_js %}un <span>tableau</span> <span>(array)</span>{% else %} un <span>tuple</span>{% endif %} avec seulement 3 éléments - le premier, le troisième et l'avant-dernier élément pour le<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %}<span> tuple</span> <span>(tuple)</span>{% endif %}.
 </p>
 
 <p style="text-align: center;">
@@ -7,18 +7,23 @@
 </p>
 
 <p>
-    <strong>Entrée:</strong> {% if is_js %}Un tableau{% else %}A tuple{% endif %}, avec au moins 3 éléments.
+    <i>
+        Une chose importante à souligner est que vous devez utiliser l'index pour extraire des éléments du<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>tuple</span>{% endif %}. Attention, le comptage de l'index commence à partir de 0, et non de 1. Cela signifie que si vous devez obtenir le premier élément du<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>tuple</span>{% endif %} <b>elements</b> , vous devez faire <b>elements[0]</b>, et le deuxième élément est <b>elements[1]</b>.
+    </i>
+</p>
+<p>
+   <strong>Entrée:</strong> {% if is_js %}Un <span>tableau</span> <span>(array)</span>{% else %} Un <span>tuple</span>{% endif %} , d'au moins 3 éléments.
 </p>
 
 <p>
-    <strong>Sortie:</strong> {% if is_js %}Un tableau{% else %}A tuple{% endif %}. 
+   <strong>Sortie:</strong> {% if is_js %}Un <span>tableau</span> <span>(array)</span>{% else %} Un <span>tuple</span>{% endif %}. 
 </p>
 
 
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Exemples:</strong>
     </p>
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
