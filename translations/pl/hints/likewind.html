@@ -1,0 +1,68 @@
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie wiem jak powinienem podejść do tego problemu.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Musi Pan wykonać 2 proste kroki: znaleźć 1, 3 i 2 element od końca, a następnie zwrócić je jako krotkę. Proszę zwrócić uwagę, że w Pythonie numeracja elementów zaczyna się od 0, a nie od 1.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Czy mógłby Pan podać ilustrujący przykład?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Na przykład mamy krotkę <b class="code">('a', 'b', 'c', 'd', 'e', 'f', 'g')</b> i musimy znaleźć jej pierwszy, trzeci i drugi element od końca. Licząc elementy od początku krotki - pierwszy element będzie miał indeks 0. Jeśli liczymy od końca, "pierwszy" element będzie miał indeks "-1", drugi - "-2" i tak dalej. Kod wyglądałby następująco:
+        </p>
+        <pre class="brush: python">
+elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+x = elements[0]
+y = elements[2]
+z = elements[-2]
+        </pre>
+        <p>
+            Po czym <b class="code">x</b> przyjmie wartość <b class="code">'a'</b>, <b class="code">y</b> - <b class="code">'c'</b>, <b class="code">z</b> - <b class="code">'f'</b>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak przekonwertować uzyskane wyniki na krotkę?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Nie są wymagane żadne specjalne działania. Mogą Państwo natychmiast skorzystać z <b class="code">return</b>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def easy_unpack(elements: tuple) -> tuple:
+
+    x = elements[0]
+    y = elements[2]
+    z = elements[-2]
+    
+    return x, y, z
+        </pre>
+        </div>
+        <p>
+            Nawiasem mówiąc, nie jest konieczne ujmowanie krotki w nawiasy, jeśli nie ma niebezpieczeństwa pomylenia jej z innymi zmiennymi. Rozwiązanie można napisać jeszcze prościej:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def easy_unpack(elements: tuple) -> tuple:
+
+    return elements[0], elements[2], elements[-2]
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
