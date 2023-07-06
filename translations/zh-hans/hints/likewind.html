@@ -1,0 +1,68 @@
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道我应该如何处理这个问题。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            你需要做2个简单的步骤：从末尾找到第1、第3和第2个元素，然后把它们作为一个元组返回。请注意，在Python中，元素的编号是从0开始的，而不是1。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            你能给出一个说明性的例子吗？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            例如，我们有一个元组<b class="code">('a', 'b', 'c', 'd', 'e', 'f', 'g')</b> ，我们需要找到它的第一、第三和第二元素。当从一个元组的开始计算元素时，第一个元素的索引是0。如果从尾部开始计算，"第一个 "元素的索引是"-1"，第二个是"-2"，以此类推。代码将如下：
+        </p>
+        <pre class="brush: python">
+elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+x = elements[0]
+y = elements[2]
+z = elements[-2]
+        </pre>
+        <p>
+            之后，<b class="code">x</b> 将取值<b class="code">'a'</b>,<b class="code">y</b> -<b class="code">'c'</b>,<b class="code">z</b> -<b class="code">'f'</b> 。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            如何将得到的结果转换成一个元组？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            不需要特别的操作。你可以立即使用<b class="code">return</b> 。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def easy_unpack(elements: tuple) -> tuple:
+
+    x = elements[0]
+    y = elements[2]
+    z = elements[-2]
+    
+    return x, y, z
+        </pre>
+        </div>
+        <p>
+            顺便说一下，如果不存在与其他变量混淆的危险，就没有必要将元组用括号括起来。该解决方案可以写得更简单：
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def easy_unpack(elements: tuple) -> tuple:
+
+    return elements[0], elements[2], elements[-2]
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
