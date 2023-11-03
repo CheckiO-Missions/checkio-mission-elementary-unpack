@@ -1,0 +1,68 @@
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich weiß nicht, wie ich dieses Problem angehen soll.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen 2 einfache Schritte machen: Finden Sie das 1., 3. und 2. Element vom Ende her und geben Sie sie dann als Tupel zurück. Beachten Sie, dass in Python die Nummerierung der Elemente mit 0 und nicht mit 1 beginnt.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Könnten Sie ein anschauliches Beispiel geben?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Wir haben zum Beispiel ein Tupel <b class="code">('a', 'b', 'c', 'd', 'e', 'f', 'g')</b> und müssen das 1., 3. und 2. Element vom Ende her finden. Wenn Sie die Elemente vom Anfang eines Tupels aus zählen, hat das erste Element den Index 0. Wenn Sie vom Ende aus zählen, hat das "erste" Element den Index "-1", das zweite - "-2" und so weiter. Der Code würde wie folgt lauten:
+        </p>
+        <pre class="brush: python">
+elements = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+x = elements[0]
+y = elements[2]
+z = elements[-2]
+        </pre>
+        <p>
+            Danach wird <b class="code">x</b> den Wert <b class="code">'a'</b>, <b class="code">y</b> - <b class="code">'c'</b>, <b class="code">z</b> - <b class="code">'f'</b> annehmen.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie kann man die erhaltenen Ergebnisse in ein Tupel umwandeln?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Es sind keine besonderen Maßnahmen erforderlich. Sie können sofort <b class="code">return</b> verwenden.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def easy_unpack(elements: tuple) -> tuple:
+
+    x = elements[0]
+    y = elements[2]
+    z = elements[-2]
+    
+    return x, y, z
+        </pre>
+        </div>
+        <p>
+            Übrigens ist es nicht notwendig, das Tupel in Klammern einzuschließen, wenn keine Gefahr der Verwechslung mit anderen Variablen besteht. Die Lösung kann noch einfacher geschrieben werden:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def easy_unpack(elements: tuple) -> tuple:
+
+    return elements[0], elements[2], elements[-2]
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
