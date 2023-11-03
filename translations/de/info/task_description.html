@@ -1,0 +1,29 @@
+<p>
+    Ihre Aufgabe hier ist es, eine Funktion zu erstellen, die {% if is_js %}ein Array <span>(array)</span>{% else %} ein Tupel <span>(tuple)</span>{% endif %} erhält und {% if is_js %}ein Array <span>(array)</span>{% else %} ein Tupel <span>(tuple)</span>{% endif %} mit nur 3 Elementen - dem ersten, dritten und zweitletzten Element für das gegebene {% if is_js %}Array <span>(array)</span>{% else %} Tupel <span>(tuple)</span>{% endif %} zurückgibt.
+</p>
+
+<p style="text-align: center;">
+    <img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+</p>
+
+<p>
+    <i>
+        Ein wichtiger Hinweis ist, dass Sie den Index verwenden müssen, um Elemente aus dem Array {% if is_js %} <span>(array)</span> {% else %} Tupel <span>(tuple)</span>{% endif %} zu extrahieren. Beachten Sie, dass die Indexzählung bei 0 beginnt, nicht bei 1. Das bedeutet, wenn Sie das erste Element aus dem Array {% if is_js %} <span>(array)</span> {% else %} tuple{% endif %} <b>elements</b> holen wollen, sollten Sie <b>elements[0]</b> verwenden, und das zweite Element ist <b>elements[1]</b>.
+    </i>
+</p>
+<p>
+   <strong>Eingabe:</strong> {% if is_js %}Ein Array <span>(array)</span>{% else %} Ein Tupel <span>(tuple)</span>{% endif %} , mindestens 3 Elemente lang.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> {% if is_js %}Ein Array <span>(array)</span>{% else %} Ein Tupel <span>(tuple)</span>{% endif %}. 
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
