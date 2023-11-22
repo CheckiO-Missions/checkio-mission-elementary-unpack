@@ -1,9 +1,9 @@
-<p>
-    Your mission here is to create a function that gets {% if is_js %}an <span translate="repeat">array</span>{% else %}a <span translate="repeat">tuple</span>{% endif %} and returns {% if is_js %}an <span translate="repeat">array</span>{% else %}a <span translate="repeat">tuple</span>{% endif %} with only 3 elements - the first, third and second element from the last for the given {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">tuple</span>{% endif %}.
-</p>
-
 <p style="text-align: center;">
     <img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+</p>
+
+<p>
+    Your mission here is to create a function that gets {% if is_js %}an <span translate="repeat">array</span>{% else %}a <span translate="repeat">tuple</span>{% endif %} and returns {% if is_js %}an <span translate="repeat">array</span>{% else %}a <span translate="repeat">tuple</span>{% endif %} with only 3 elements - the first, third and second element from the last for the given {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">tuple</span>{% endif %}.
 </p>
 
 <p>
@@ -11,6 +11,11 @@
         One important thing worth pointing out is that you need to use index in order to extract elements from the {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">tuple</span>{% endif %}. Pay attention, index counting starts from 0, not from 1. Which means that if you need to get the first element from the {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">tuple</span>{% endif %} <b>elements</b>, you should do <b>elements[0]</b>, and the second element is <b>elements[1]</b>.
     </i>
 </p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}easy-unpack.svg" alt="example" style="max-height: 200px"/>
+</p>
+
 <p>
     <strong>Input:</strong> {% if is_js %}An <span translate="repeat">array</span>{% else %}A <span translate="repeat">tuple</span>{% endif %}, at least 3 elements long.
 </p>

@@ -1,9 +1,9 @@
-<p>
-    Państwa zadaniem jest stworzenie funkcji, która pobierze {% if is_js %}tablicę <span>(array)</span>{% else %} krotkę <span>(tuple)</span>{% endif %} i zwróci {% if is_js %}tablicę <span>(array)</span>{% else %} krotkę <span>(tuple)</span>{% endif %} zawierającą tylko 3 elementy - pierwszy, trzeci i drugi element od ostatniego dla danej {% if is_js %}tablicy <span>(array)</span>{% else %} krotki <span>(tuple)</span>{% endif %}.
-</p>
-
 <p style="text-align: center;">
     <img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+</p>
+
+<p>
+    Państwa zadaniem jest stworzenie funkcji, która pobierze {% if is_js %}tablicę <span>(array)</span>{% else %} krotkę <span>(tuple)</span>{% endif %} i zwróci {% if is_js %}tablicę <span>(array)</span>{% else %} krotkę <span>(tuple)</span>{% endif %} zawierającą tylko 3 elementy - pierwszy, trzeci i drugi element od ostatniego dla danej {% if is_js %}tablicy <span>(array)</span>{% else %} krotki <span>(tuple)</span>{% endif %}.
 </p>
 
 <p>
@@ -11,6 +11,11 @@
         Ważną rzeczą, na którą warto zwrócić uwagę, jest to, że należy użyć indeksu, aby wyodrębnić elementy z tablicy {% if is_js %} <span>(array)</span> {% else %} krotki <span>(tuple)</span>{% endif %}. Proszę zwrócić uwagę, że liczenie indeksu zaczyna się od 0, a nie od 1. Oznacza to, że jeśli chcą Państwo pobrać pierwszy element z tablicy {% if is_js %} <span>(array)</span> {% else %} krotki <span>(tuple)</span>{% endif %} <b>elements</b> , należy wykonać <b>elements[0]</b>, a drugim elementem jest <b>elements[1]</b>.
     </i>
 </p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}easy-unpack.svg" alt="example" style="max-height: 200px"/>
+</p>
+
 <p>
    <strong>Wejście:</strong> {% if is_js %}Tablica <span>(array)</span>{% else %} Krotka <span>(tuple)</span>{% endif %} , o długości co najmniej 3 elementów.
 </p>
